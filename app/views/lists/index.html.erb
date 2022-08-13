@@ -1,0 +1,22 @@
+<div class="banner" style = "background-image: url(https://diplomartbrussels.com/wp-content/uploads/2020/09/food-background-images-94-images-in-co-381169-png-images-pngio-food-background-png-1440_619.png);">
+  <div class="container">
+    <div class="content-wrapper">
+      <h1 class="title">
+        <span class="title-word title-word-1">This</span>
+        <span class="title-word title-word-2">is</span>
+        <span class="title-word title-word-3">my</span>
+        <span class="title-word title-word-4">breakfast</span>
+      </h1>
+      <%= link_to "Create lists", new_list_path, class: "list-button" %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category">
+        <%= link_to list.name, list_path(list), class: "single-card" %>
+      </div>
+    <% end %>
+  </div>
+</div>

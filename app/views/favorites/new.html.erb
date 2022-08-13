@@ -1,0 +1,12 @@
+<div class="banner">
+  <div class="container">
+    <h1>Favorites#new</h1>
+    <%= simple_form_for [@list, @favorite] do |f| %>
+      <div class="favorite-form">
+        <%= f.association :breakfast %>
+        <%= f.input :comment %>
+        <%= f.submit 'submit', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

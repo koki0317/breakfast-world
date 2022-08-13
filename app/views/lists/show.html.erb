@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <div class="content-wrapper">
+      <h1><%= @list.name %></h1>
+      <%= link_to "Create a favorite list", new_list_favorite_path(@list), class: "btn btn-flat" %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @list.favorites.each do |favorite| %>
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "3bec532fff0c0bcd7f8becf11dd27962.png", alt: "text" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= favorite.breakfast.name %></h5>
+          <p class="card-text"><%= favorite.comment %></p>
+          <%= link_to "See Recipe", lists_path, class: "btn btn-primary mr-5" %>
+          <%= link_to "Delete", favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Delete #{favorite.breakfast.name}?" }, class: "btn btn-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
