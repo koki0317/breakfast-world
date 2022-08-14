@@ -1,8 +1,19 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 50vh;
-  background-image: url("3bec532fff0c0bcd7f8becf11dd27962.png");
+  height: 450px;
+  background-size: cover;
+  position: relative;
+
+  .delete-list {
+    color: white;
+    position: absolute;
+    top:8px;
+    right:16px;
+    text-decoration: none;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
 
 .banner h1 {
@@ -79,4 +90,18 @@
   font-weight: 800;
   font-size: 8.5vw;
   text-transform: uppercase;
+}
+
+.title-favorite h1 {
+  padding-top: 20px;
+  color:black !important;
+  opacity: 0.8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.title-list h1 {
+  padding-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
 }

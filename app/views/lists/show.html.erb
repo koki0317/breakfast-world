@@ -1,6 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key %>);">
   <div class="container">
     <div class="content-wrapper">
+      <%= link_to list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Delete #{@list.name}?" }, class: "delete-list" do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
       <h1><%= @list.name %></h1>
       <%= link_to "Create a favorite list", new_list_favorite_path(@list), class: "btn btn-flat" %>
     </div>
@@ -10,7 +13,10 @@
   <div class="cards">
     <% @list.favorites.each do |favorite| %>
       <div class="card" style="width: 18rem;">
-        <%= image_tag "3bec532fff0c0bcd7f8becf11dd27962.png", alt: "text" %>
+        <%= link_to edit_list_favorite_path(favorite), class:"edit-link" do %>
+          <i class="fa-solid fa-pencil"></i>
+        <% end %>
+        <img src=<%= favorite.breakfast.img_url %> class="show-image" alt="">
         <div class="card-body">
           <h5 class="card-title"><%= favorite.breakfast.name %></h5>
           <p class="card-text"><%= favorite.comment %></p>

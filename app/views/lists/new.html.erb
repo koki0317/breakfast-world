@@ -1,10 +1,14 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/3b/ec/53/3bec532fff0c0bcd7f8becf11dd27962.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnJlYWtmYXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60);">
   <div class="container">
-    <h1>Create new list!</h1>
+    <div class="title-list">
+      <h1>Create new list!</h1>
+    </div>
     <%= simple_form_for @list do |f| %>
-      <%= f.input :name %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit 'submit', class: 'btn btn-primary' %>
-    <% end %>
+      <div class="list-form">
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit 'submit', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
   </div>
 </div>

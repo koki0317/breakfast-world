@@ -11,11 +11,18 @@
     </div>
   </div>
 </div>
+<div class="middle-content">
+  <iframe width="760" height="400" src="https://www.youtube.com/embed/ry1E1uzPSU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <div class="container">
-  <div class="cards">
+  <div class="cards-index">
     <% @lists.each do |list| %>
-      <div class="card-category">
-        <%= link_to list.name, list_path(list), class: "single-card" %>
+      <div class="card-index">
+        <% if list.photo.attached? %>
+          <div class="card-category" data-aos= "zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000" style= "background-image: url(<%= cl_image_path list.photo.key %>);">
+          <% end %>
+          <%= link_to list.name, list_path(list), class: "single-card" %>
+        </div>
       </div>
     <% end %>
   </div>

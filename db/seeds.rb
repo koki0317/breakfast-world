@@ -11,10 +11,10 @@ Breakfast.destroy_all
 
 10.times do
   Breakfast.create!(
-    img_url: "https://s3.ap-northeast-1.amazonaws.com/kodomomanabi-labo.net/wp/wp-content/uploads/images/2021/03/food-education-breakfast-1.jpg",
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    rating: rand(1..5)
+    rating: rand(1..5),
+    img_url: "https://source.unsplash.com/random/640x400/?food"
   )
 end
 

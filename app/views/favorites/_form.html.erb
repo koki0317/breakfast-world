@@ -1,0 +1,8 @@
+<%= simple_form_for [@list, @favorite] do |f| %>
+  <div class="favorite-form">
+    <%= f.association :breakfast %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :comment %>
+    <%= f.submit 'submit', class: 'btn btn-primary' %>
+  </div>
+<% end %>

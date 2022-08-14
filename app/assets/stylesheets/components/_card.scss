@@ -4,7 +4,6 @@
   grid-gap: 16px;
   margin: 60px 0px;
 }
-
 .single-card {
   text-decoration: none;
   color: white;
@@ -21,7 +20,7 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +30,20 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-image: url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg");
   text-decoration: none;
+  width: 40%;
+  margin:6vh 0;
 }
+
+.card-index:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.card-title a {
+  text-decoration: none;
+  font-size: 26px;
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -68,4 +78,25 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.card-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.edit-link {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card {
+  position: relative;
 }
