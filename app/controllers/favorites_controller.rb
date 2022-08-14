@@ -16,7 +16,7 @@ class FavoritesController < ApplicationController
   end
 
   def edit
-    raise
+
   end
 
   def destroy
