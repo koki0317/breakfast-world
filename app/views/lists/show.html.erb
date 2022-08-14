@@ -19,7 +19,9 @@
         <%= link_to edit_list_favorite_path(favorite), class:"edit-link" do %>
           <i class="fa-solid fa-pencil"></i>
         <% end %>
-        <%= cl_image_tag favorite.photo.key, class:"favorite-image" %>
+        <% if favorite.photo.attached? %>
+          <%= cl_image_tag favorite.photo.key, class:"favorite-image" %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= favorite.breakfast.name %></h5>
           <p class="card-text"><%= favorite.comment %></p>
