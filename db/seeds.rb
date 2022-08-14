@@ -13,8 +13,7 @@ Breakfast.destroy_all
   Breakfast.create!(
     name: Faker::Food.dish,
     description: Faker::Food.description,
-    rating: rand(1..5),
-    img_url: "https://source.unsplash.com/random/640x400/?food"
+    rating: rand(1..5)
   )
 end
 

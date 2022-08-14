@@ -28,6 +28,6 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:favorite).permit(:comment, :breakfast_id)
+    params.require(:favorite).permit(:comment, :breakfast_id, :photo)
   end
 end
