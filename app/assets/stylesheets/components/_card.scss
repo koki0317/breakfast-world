@@ -95,8 +95,30 @@
   color: white;
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1.0;
+    color: white;
+  }
 }
 
 .card {
   position: relative;
+}
+
+.delete-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  text-decoration: none;
+  color: $red;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  opacity:0.8;
+
+  &:hover {
+    opacity: 1.0;
+    color: $red;
+  }
 }

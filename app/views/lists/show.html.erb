@@ -13,6 +13,9 @@
   <div class="cards">
     <% @list.favorites.each do |favorite| %>
       <div class="card" style="width: 18rem;">
+        <%= link_to favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Delete #{favorite.breakfast.name}?" }, class: "delete-link" do %>
+          <i class="fa-solid fa-trash-can"></i>
+        <% end %>
         <%= link_to edit_list_favorite_path(favorite), class:"edit-link" do %>
           <i class="fa-solid fa-pencil"></i>
         <% end %>
@@ -20,8 +23,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= favorite.breakfast.name %></h5>
           <p class="card-text"><%= favorite.comment %></p>
-          <%= link_to "See Recipe", lists_path, class: "btn btn-primary mr-5" %>
-          <%= link_to "Delete", favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Delete #{favorite.breakfast.name}?" }, class: "btn btn-danger" %>
+          <%= link_to "See Recipe", lists_path, class: "btn btn-primary mr-5 w-100" %>
         </div>
       </div>
     <% end %>
