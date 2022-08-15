@@ -22,7 +22,7 @@
         <% if favorite.photo.attached? %>
           <%= cl_image_tag favorite.photo.key, class:"favorite-image" %>
         <% else %>
-          <%= image_tag "https://i.pinimg.com/originals/8e/be/2a/8ebe2a4ffd8621a04b333b9f4bc306be.gif" %>
+          <%= image_tag "https://i.pinimg.com/originals/8e/be/2a/8ebe2a4ffd8621a04b333b9f4bc306be.gif", class:"favorite-image"  %>
         <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= favorite.breakfast.name %></h5>
