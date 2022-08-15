@@ -16,7 +16,16 @@ class FavoritesController < ApplicationController
   end
 
   def edit
+    @favorite = Favorite.find(params[:id])
+  end
 
+  def update
+    @favorite = Favorite.find(params[:favorite][:breakfast_id])
+    if @favorite.update(favorite_params)
+      redirect_to list_path(@favorite.list)
+    else
+      render :edit
+    end
   end
 
   def destroy

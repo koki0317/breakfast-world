@@ -16,7 +16,7 @@
         <%= link_to favorite_path(favorite), data: { turbo_method: :delete, turbo_confirm: "Delete #{favorite.breakfast.name}?" }, class: "delete-link" do %>
           <i class="fa-solid fa-trash-can"></i>
         <% end %>
-        <%= link_to edit_list_favorite_path(favorite), class:"edit-link" do %>
+        <%= link_to edit_favorite_path(favorite), class:"edit-link" do %>
           <i class="fa-solid fa-pencil"></i>
         <% end %>
         <% if favorite.photo.attached? %>

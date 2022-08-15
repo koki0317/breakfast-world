@@ -1,1 +1,15 @@
-<h1>Edit</h1>
+<div class="banner" style="background-image: url(https://img.freepik.com/premium-photo/healthy-breakfast-eating-concept-various-morning-food-pancakes-waffles-croissant-oatmeal-sandwich-granola-with-yogurt-fruit-berries-coffee-tea-orange-juice-white-background_136595-2126.jpg?w=2000);">
+  <div class="container">
+    <div class="title-favorite">
+      <h1>Edit</h1>
+    </div>
+    <%= simple_form_for @favorite do |f| %>
+      <div class="favorite-form">
+        <%= f.association :breakfast %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :comment %>
+        <%= f.submit 'submit', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
