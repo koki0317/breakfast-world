@@ -117,23 +117,23 @@ body {
   width: 250px;
 }
 
-@media screen and (max-width: 499px) {
-  /*　画面サイズ 499pxまで適用　*/
-  h2 {
-    color: red;
-  }
-}
+// @media screen and (max-width: 499px) {
+//   /*　画面サイズ 499pxまで適用　*/
+//   h2 {
+//     color: red;
+//   }
+// }
 
-@media screen and (min-width: 500px) and (max-width: 999px) {
-  /*　画面サイズ 500pxから999pxまで適用　*/
-  h2 {
-    color: green;
-  }
-}
+// @media screen and (min-width: 500px) and (max-width: 999px) {
+//   /*　画面サイズ 500pxから999pxまで適用　*/
+//   h2 {
+//     color: green;
+//   }
+// }
 
-@media screen and (min-width:1000px) {
-  /*　画面サイズ 1000px以上から適用　*/
-  h2 {
-    color: blue;
-  }
-}
+// @media screen and (min-width:1000px) {
+//   /*　画面サイズ 1000px以上から適用　*/
+//   h2 {
+//     color: blue;
+//   }
+// }
