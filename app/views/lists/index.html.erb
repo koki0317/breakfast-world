@@ -14,16 +14,47 @@
 <div class="middle-content">
   <iframe width="760" height="400" src="https://www.youtube.com/embed/ry1E1uzPSU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="container">
-  <div class="cards-index">
-    <% @lists.each do |list| %>
-      <div class="card-index">
-        <% if list.photo.attached? %>
-          <div class="card-category" data-aos= "zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000" style= "background-image: url(<%= cl_image_path list.photo.key %>);">
-          <% end %>
-          <%= link_to list.name, list_path(list), class: "single-card" %>
+<div class="breakfast-sample">
+  <h2>Here are our beautiful breakfast samples</h2>
+  <h3>Try these out!</h3>
+  <div class="container">
+    <div class="sample-image-wrapper">
+      <%= image_tag "https://img-global.cpcdn.com/recipes/c5fc07a2fc2d25eb/1200x630cq70/photo.jpg", alt: "text", class: "sample-image" %>
+      <%= image_tag "https://simply-delicious-food.com/wp-content/uploads/2019/07/Pancake-board-2.jpg", alt: "text", class: "sample-image" %>
+      <%= image_tag "https://images.everydayhealth.com/images/health-benefits-of-oatmeal-1440x810.jpg?sfvrsn=9f201ef_1", alt: "text", class: "sample-image" %>
+    </div>
+  </div>
+</div>
+<div class="breakfast-icon-wrapper">
+  <h2>Morning starts with nutritious food and nice time. </h2>
+  <div class="icon-wrapper">
+    <div class="single-icon">
+      <i class="fa-solid fa-leaf"></i>
+      <p>Get nutritious</p>
+    </div>
+    <div class="single-icon">
+      <i class="fa-solid fa-bowl-food"></i>
+      <p>Be fullfilled</p>
+    </div>
+    <div class="single-icon">
+      <i class="fa-solid fa-champagne-glasses"></i>
+      <p>Enjoy</p>
+    </div>
+  </div>
+  <%= link_to "Create lists", new_list_path, class: "list-button" %>
+</div>
+<div class="card-wrapper">
+  <div class="container">
+    <div class="cards-index">
+      <% @lists.each do |list| %>
+        <div class="card-index">
+          <% if list.photo.attached? %>
+            <div class="card-category" data-aos= "zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000" style= "background-image: url(<%= cl_image_path list.photo.key %>);">
+            <% end %>
+            <%= link_to list.name, list_path(list), class: "single-card" %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

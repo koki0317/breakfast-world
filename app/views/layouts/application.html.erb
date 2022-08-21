@@ -10,15 +10,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
+    <%= render "layouts/top-bar" %>
     <%= yield %>
-    <div class="footer">
-      <%= link_to lists_path do %>
-        <i class="fa-solid fa-utensils"></i>
-      <% end %>
-      <%= link_to "#" do %>
-        <i class="fa-solid fa-arrow-up-short-wide"></i>
-      <% end %>
-    </div>
+    <%= render "layouts/footer" %>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
