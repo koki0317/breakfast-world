@@ -4,12 +4,10 @@
       <h1>Your favorite?</h1>
     </div>
     <%= simple_form_for [@list, @favorite] do |f| %>
-      <div class="list-form">
-        <%= f.association :breakfast %>
-        <%= f.input :photo, as: :file %>
-        <%= f.input :comment %>
-        <%= f.submit 'submit', class: 'btn btn-primary' %>
-      </div>
+      <%= f.association :breakfast %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :comment %>
+      <%= f.submit 'submit', class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>

@@ -9,12 +9,16 @@ puts "Breakdast destroying"
 Breakfast.destroy_all
 # List.destroy_all
 
-10.times do
-  Breakfast.create!(
-    name: Faker::Food.dish,
-    description: Faker::Food.description,
-    rating: rand(1..5)
-  )
-end
+Breakfast.create!(name: "bacon egg toast")
+Breakfast.create!(name: "Oatmeal")
+Breakfast.create!(name: "Onigiri")
+Breakfast.create!(name: "Pancake")
+Breakfast.create!(name: "Scrambled eggs")
+Breakfast.create!(name: "Otyaduke")
+Breakfast.create!(name: "Curry")
+Breakfast.create!(name: "Sunny-side up")
+Breakfast.create!(name: "Omelette")
+Breakfast.create!(name: "Rice & miso soup")
+
 
 puts "#{Breakfast.count} finished"
