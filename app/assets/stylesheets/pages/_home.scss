@@ -37,11 +37,16 @@ body {
 .middle-content {
   text-align: center;
   margin: 50px;
+
+  .video {
+    width: 80%;
+    height: 350px;
+  }
 }
 
 .breakfast-sample {
   text-align: center;
-  height: 500px;
+
   background-color: #FFF8F0;
 
   h2 {
@@ -103,13 +108,14 @@ body {
 .sample-image-wrapper {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 50px;
 }
 
 .sample-image {
   object-fit: cover;
   border-radius: 10px;
   height: 200px;
-  width: 250px;
+  padding-bottom: 30px;
 }
 
 // @media screen and (max-width: 499px) {
